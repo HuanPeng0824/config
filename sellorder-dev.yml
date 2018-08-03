@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: sellorder
+  datasource:
+    url: jdbc:mysql://192.168.8.100:3306/demo?characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+  redis:
+    host: 192.168.8.100
+    port: 6379
+  rabbitmq:
+    host: 192.168.8.100
+    port: 5672
+    username: root
+    password: 123456
+env: dev1
