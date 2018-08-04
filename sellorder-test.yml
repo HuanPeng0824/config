@@ -1,1 +1,26 @@
-
+spring:
+  application:
+    name: sellorder
+  datasource:
+    url: jdbc:mysql://192.168.8.100:3306/demo?characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+  redis:
+    host: 192.168.8.100
+    port: 6379
+  rabbitmq:
+    host: 192.168.8.100
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        myMsgInput:
+          destination: myMsgTest
+        myMsgOutput:
+          #destination：指定了消息发送的目的地，对应 RabbitMQ，会发送到 exchange 是 mqTestDefault 的所有消息队列中。
+          destination: myMsgTest
+env: dev2
