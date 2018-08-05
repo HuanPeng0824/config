@@ -20,7 +20,9 @@ spring:
       bindings:
         myMsgInput:
           destination: myMsgTest
+          group: order
         myMsgOutput:
           #destination：指定了消息发送的目的地，对应 RabbitMQ，会发送到 exchange 是 mqTestDefault 的所有消息队列中。
           destination: myMsgTest
+          group: order
 env: dev2
