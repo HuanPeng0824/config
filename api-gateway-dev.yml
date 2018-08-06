@@ -1,0 +1,13 @@
+#自定义路由规则
+zuul:
+  routes:
+    myProduct:
+      path: /myProduct/**
+      serviceId: sellproduct
+      #敏感头，传cookies
+      sensitiveHeaders:
+    #上面的简洁写法
+#    sellproduct: /myProduct/**
+  #禁止访问
+  ignored-patterns:
+    - /myProduct/product/listForOrder
