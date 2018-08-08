@@ -1,11 +1,11 @@
 #自定义路由规则
 zuul:
+  #敏感头，传cookies
   sensitiveHeaders:
   routes:
     myProduct:
       path: /myProduct/**
       serviceId: sellproduct
-      #敏感头，传cookies
     #上面的简洁写法
 #    sellproduct: /myProduct/**
   #禁止访问
